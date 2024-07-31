@@ -1,13 +1,12 @@
 pipeline {
-    agent any
+    agent {
+        label 'docker-agent-alpine'
+    }
 
     stages {
         stage('build') {
             steps {
-                sh 'apt install python3.11-venv'
-                sh 'python3 -m venv .venv'
-                sh 'source .venv/bin/activate'
-                sh 'python3 -m pip install -r requirements.txt'
+                sh 'pip install -r requirements.txt'
             }
         }
         stage('test') {
