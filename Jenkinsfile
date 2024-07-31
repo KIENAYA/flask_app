@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                sh 'pytest /tests/tests_app.py'
+                sh 'pytest tests/tests_app.py'
             }
         }
 
