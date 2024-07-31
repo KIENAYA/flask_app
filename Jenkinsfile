@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'docker-agent-alpine'
+        docker { image 'python:3.9-slim' }
     }
 
     stages {
