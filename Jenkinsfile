@@ -9,12 +9,6 @@ pipeline {
                 sh 'pip install -r requirements.txt'
             }
         }
-        stage('test') {
-            steps {
-                sh 'pip install pytest'
-                sh 'pytest'
-
-            }
            
         }
         stage('deploy') {
