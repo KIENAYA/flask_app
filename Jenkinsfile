@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        dockerfile true
-    }
+    agent any
     environment {
         DOCKER_IMAGE = 'flask_app'
         DOCKER_TAG = 'latest'
@@ -10,6 +8,9 @@ pipeline {
     }
     stages {
         stage('test') {
+            agent {
+                dockerfile true
+            }
             steps {
                 sh 'pytest tests/tests_app.py'
             }
