@@ -4,3 +4,8 @@ run_test:
     - pip install pytest
   script:
     - pytest
+
+deploy:
+  image: python:3.9-slim
+  script:
+    - python app.py
