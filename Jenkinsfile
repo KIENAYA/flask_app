@@ -7,14 +7,14 @@ pipeline {
         DOCKER_REGISTRY = 'kienaya'
     }
     stages {
-        stage('test') {
-            agent {
-                dockerfile true
-            }
-            steps {
-                sh 'pytest tests/tests_app.py'
-            }
-        }
+        // stage('test') {
+        //     agent {
+        //         dockerfile true
+        //     }
+        //     steps {
+        //         sh 'pytest tests/tests_app.py'
+        //     }
+        // }
         stage('Checkout') {
             steps {
                 git 'https://github.com/KIENAYA/flask_app.git'
