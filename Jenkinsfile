@@ -5,7 +5,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = 'flask_app'
         DOCKER_TAG = 'latest'
-        REGISTRY_CREDENTIALS = 'flask_credential'
+        REGISTRY_CREDENTIALS = 'flask_token'
         DOCKER_REGISTRY = 'kienaya'
     }
     stages {
