@@ -4,8 +4,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'apt install python3-pip'
-                sh 'pip install -r requirements.txt'
+                sh 'python3 -m venv .venv'
+                sh 'source .venv/bin/activate'
+                sh 'python3 -m pip install -r requirements.txt'
             }
         }
         stage('test') {
