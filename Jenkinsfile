@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Checkout') {
             steps {
-                git 'https://gitlab.com/kien3361931/Test'
+                git 'https://gitlab.com/kien3361931/Test.git'
             }
         }
         
