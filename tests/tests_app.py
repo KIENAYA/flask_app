@@ -8,7 +8,7 @@ def client():
 
 def test_home(client):
     rv = client.get('/')
-    assert b'Welcom to the Flask App!' in rv.data
+    assert b'Welcome to the Flask App!' in rv.data
 
 def test_about(client):
     rv = client.get('/about')
